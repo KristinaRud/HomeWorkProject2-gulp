@@ -1,0 +1,130 @@
+.container{
+    padding: 0 28px;
+}
+.d-flex-col{
+    display: flex;
+    flex-direction: column;
+}
+.header{
+    background-color: $bgColor;
+}
+.header__inner{
+    min-height: 83px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    @media (min-width:768px) {
+        justify-content: center;
+    }
+}
+.menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.menu__hamburger{
+    width: 44px;
+    height: 37px;
+    background-color: #000;
+    border: none;
+    position: relative;
+   
+    @media (min-width:768px) {
+        display: none;
+        cursor: pointer;    
+    }
+
+}
+
+.bar{
+    display: block;
+    width: 17px;
+    height: 2px;
+    margin: 0 auto 2px auto;
+    transition: all 0.3s ease-in-out;
+    background-color: #fff;
+}
+
+.bar-1{
+    margin-top: 13px;
+}
+
+.menu__hamburger.active .bar:nth-child(2){
+    opacity: 0;
+}
+.menu__hamburger.active .bar:nth-child(1){
+    transform: translateY(4px) rotate(45deg);
+}
+.menu__hamburger.active .bar:nth-child(3){
+    transform: translateY(-4px) rotate(-45deg);
+}
+
+.menu__list{
+    text-transform: uppercase;
+    @include font-400;
+    font-size: 11px;
+    line-height: 22px;
+    position: absolute;
+    right: 0;
+    top: 37px;
+    gap: 0;
+    width: 182px;
+
+    display: none;
+    background-color: #F5F5F5;
+    justify-content: space-between;
+    align-items: start;
+    flex-direction: column;
+
+    @media (min-width:768px) {
+        width: auto;
+        position: static;
+        flex-direction: row;
+        gap: 34px;
+        background-color: #fff;
+        display: flex;
+    }
+    @media (min-width:1200px) {
+        gap: 68px;
+    }
+}
+
+.menu__list.active{
+    display: flex;
+    right: 0;
+}
+
+.menu__list-item{
+    width: inherit;
+    padding-left: 14px;
+    padding-top: 4.5px;
+    padding-bottom: 1.5px;
+    @media (min-width:768px) {
+        padding:0;
+    }
+    &:hover{
+        background-color: #E5E5E5;
+    }
+}
+.menu__item__link{
+    color: $main-txtColor;
+}
+.menu__item__link--accent{
+    color: $accent;
+}
+
+.header__intro{
+    max-width: 100%;
+    height:auto;
+    @media (min-width:768px) {
+        min-width: 768px;
+    }
+    @media (min-width:1200px) {
+        min-width: 1170px;
+    }
+}
+
+

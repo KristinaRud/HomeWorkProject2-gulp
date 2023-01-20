@@ -1,0 +1,17 @@
+@import "reset";
+@import "vars";
+@import "mixins";
+@import "header";
+@import "main";
+
+html{
+	box-sizing: border-box;
+}
+*,*::after,*::before{
+	box-sizing: inherit;
+}
+
+body{
+    min-width: 320px;
+    overflow-x: hidden;
+}

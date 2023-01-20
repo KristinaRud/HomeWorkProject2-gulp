@@ -1,0 +1,7 @@
+.posts__title{
+    @include font-700;
+    font-size: 14px;
+    line-height: 22px;
+    text-transform: uppercase;
+    color:$main-txtColor;
+}
