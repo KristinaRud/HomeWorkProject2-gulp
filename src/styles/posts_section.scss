@@ -1,20 +1,20 @@
 .posts{
     display: grid;
     padding-top: 38px;
+    padding-bottom: 40px;
     gap: 24px;
     @media (min-width:768px) {
         padding-top: 66px;
+        padding-bottom: 60px;
     }
+    @media (min-width:1200px) {
+        padding-top: 66px;
+        padding-bottom: 69px;
+    }
+
 }
 .posts__title{
-    @include font-700;
-    font-size: 14px;
-    line-height: 22px;
-    text-transform: uppercase;
-    color:$main-txtColor;
-    @media (min-width:768px) {
-        font-size: 16px;
-    }
+    @include title-section;
 }
 .posts__cards{
     display: grid;
@@ -51,7 +51,7 @@
         font-size: 16px;
     }
 }
-.posts__descr-comment{
+.posts__descr-comments{
     @include font-400;
     color:$comments-txtColor;
     font-size: 11px;
